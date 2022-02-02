@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
             minefield.Uncover(t);
         }
 
+        // Right click
         if (Input.GetMouseButtonDown(1))
         {
             if (!t.IsCovered()) return;
@@ -44,6 +45,10 @@ public class Player : MonoBehaviour
                 hit.collider.gameObject.GetComponent<Tile>() : null;
     }
 
+    /// <summary>
+    /// Returns if the mouse is doing something.
+    /// </summary>
+    /// <returns>If the mouse is doing something.</returns>
     private bool IsMouseInteraction()
     {
         return Input.GetMouseButtonUp(0) || 

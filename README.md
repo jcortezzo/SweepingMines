@@ -1,1 +1,3 @@
 # SweepingMines
+
+Minesweeper clone
